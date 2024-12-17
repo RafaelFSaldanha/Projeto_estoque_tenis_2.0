@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <link href="./assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/cadastros.css">
+    <title>Cadastrados</title>
+</head>
+
+<body>
+
+    <div id="navbar-cadastros"></div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Cor</th>
+                    <th scope="col">Tamanho</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="lista-cadastros">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formulario-editar">
+                        <div class="mb-3">
+                            <label for="editar-marca" class="form-label">Marca:</label>
+                            <input type="text" class="form-control" id="editar-marca" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editar-modelo" class="form-label">Modelo:</label>
+                            <input type="text" class="form-control" id="editar-modelo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editar-cor" class="form-label">Cor:</label>
+                            <input type="text" class="form-control" id="editar-cor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editar-tamanho" class="form-label">Tamanho:</label>
+                            <input type="text" class="form-control" id="editar-tamanho" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editar-preco" class="form-label">Preço:</label>
+                            <input type="number" class="form-control" id="editar-preco" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editar-estoque" class="form-label">Estoque:</label>
+                            <input type="number" class="form-control" id="editar-estoque" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="salvarEdicao()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/navbar.js"></script>
+
+    <script type="module">
+        import { adicionarFiltro, aplicarFiltros } from './script/filtrar.js';
+        import { carregarCadastros } from './script/cadastros.js';
+        import { editarCadastro, salvarEdicao } from './script/editar.js';
+        import { deletarCadastro } from './script/deletar.js';
+        import { pesquisar } from './script/pesquisar.js';
+
+        window.adicionarFiltro = adicionarFiltro;
+        window.aplicarFiltros = aplicarFiltros;
+        window.carregarCadastros = carregarCadastros;
+        window.editarCadastro = editarCadastro;
+        window.salvarEdicao = salvarEdicao;
+        window.deletarCadastro = deletarCadastro;
+        window.pesquisar = pesquisar;
+
+        window.onload = carregarCadastros;
+    </script>
+
+    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

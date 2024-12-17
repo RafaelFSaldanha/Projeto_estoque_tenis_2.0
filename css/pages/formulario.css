@@ -1,0 +1,16 @@
+body {
+    background-color: #d4d4d4;
+    
+}
+
+@media (max-width: 426px) {
+
+    .row {
+        display: block;
+    }
+
+    .row > .col {
+        width: 100% !important;
+        margin-bottom: 10px; 
+    }
+}
