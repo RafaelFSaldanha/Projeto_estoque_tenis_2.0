@@ -27,11 +27,11 @@ export function pesquisar(event) {
             <td>R$ ${parseFloat(tenis.preco).toFixed(2)}</td>
             <td>${tenis.estoque}</td>
             <td>
-                <button onClick="editarCadastro()">
-                    <i class="f a-solid fa-pen-to-square" ></i>
+                <button onClick="editarCadastro(${tenis.id})">
+                    <i class="fa-solid fa-pen-to-square"></i>
                 </button>
-                <button onClick="deletarCadastro()">
-                    <i class="fa-solid fa-trash" ></i>
+                <button onClick="deletarCadastro(${tenis.id})">
+                    <i class="fa-solid fa-trash"></i>
                 </button>
             </td>
         `;
