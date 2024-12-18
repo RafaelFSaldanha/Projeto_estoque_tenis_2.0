@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.insertAdjacentHTML('afterbegin', data);
             const page = window.location.pathname.split('/').pop();
 
-            if (page === 'index.html') {
-                document.getElementById('navbar-landingpage').classList.remove('d-none');
-            }  
-            else if (page === 'formulario.html') {
+            if (page === 'formulario.html') {
                 document.getElementById('navbar-formulario').classList.remove('d-none');
             }
             else if (page === 'cadastros.html') {
                 document.getElementById('navbar-cadastros').classList.remove('d-none');
+            }
+            else {
+                document.getElementById('navbar-landingpage').classList.remove('d-none');
             }
         })
 });

@@ -1,36 +1,34 @@
-const url = 'https://shoes-collections.p.rapidapi.com/shoes';
+const url = 'https://mocki.io/v1/6509e41a-f733-4e35-81fc-975b22a5d469';
 const options = {
-    method: 'GET',
-    headers: {
-        'x-rapidapi-key': '95bb6d927emshe72e4702c36d87cp121dc7jsn2ed5a1ed12a2',
-        'x-rapidapi-host': 'shoes-collections.p.rapidapi.com'
-    }
+    method: 'GET'
 };
 
-async function fetchAndLoadCarousel() {
+async function carregarCarrossel() {
     try {
         const response = await fetch(url, options);
         const data = await response.json();
+        console.log('Resposta da API:', data);
 
-        if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data.images) && data.images.length > 0) {
             const carouselInner = document.querySelector('.carousel-inner');
             carouselInner.innerHTML = '';
 
-            data.forEach((item, index) => {
+            data.images.forEach((image, index) => {
                 const carouselItem = document.createElement('div');
                 carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
                 carouselItem.setAttribute('data-bs-interval', '3000');
+
                 carouselItem.innerHTML = `
-                    <img src="${item.image}" class="d-block w-100" alt="${item.name}">
+                    <img src="${image}" alt="Imagem do produto ${index + 1}">
                 `;
                 carouselInner.appendChild(carouselItem);
             });
         } else {
-            console.error('Nenhum dado retornado da API ou estrutura inesperada.');
+            console.error('Nenhum dado de imagens encontrado ou estrutura inesperada.');
         }
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
     }
 }
 
-fetchAndLoadCarousel();
+carregarCarrossel();

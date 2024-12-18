@@ -1,6 +1,20 @@
 body {
     background-color: #d4d4d4;
-    
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 426px) {
@@ -12,5 +26,9 @@ body {
     .row > .col {
         width: 100% !important;
         margin-bottom: 10px; 
+    }
+
+    #footer {
+        margin-top: 15vh;
     }
 }

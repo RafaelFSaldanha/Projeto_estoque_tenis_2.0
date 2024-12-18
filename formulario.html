@@ -12,72 +12,73 @@
 <body>
     <div id="navbar-formulario"></div>
 
-    <form class="needs-validation" novalidate id="cadastroForm">
-        <div class="container text-center position-absolute top-50 start-50 translate-middle"
-            style="width: 60vw; height: 60vh; border-radius: 20px;">
-            <h3>Cadastre seu tênis</h3>
-            <div class="row align-items-start">
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="marca" class="form-label">Marca: </label>
-                        <input type="text" id="marca" class="form-control" required>
+    <main class="container-main">
+        <form class="needs-validation" novalidate id="cadastroForm">
+            <div class="container text-center position-relative" style="width: 60vw; height: 60vh; border-radius: 20px;">
+                <h3>Cadastre seu tênis</h3>
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="marca" class="form-label">Marca: </label>
+                            <input type="text" id="marca" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="modelo" class="form-label">Modelo: </label>
+                            <input type="text" id="modelo" class="form-control" required>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="modelo" class="form-label">Modelo: </label>
-                        <input type="text" id="modelo" class="form-control" required>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row align-items-start">
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="cor" class="form-label">Cor: </label>
-                        <input type="text" id="cor" class="form-control" required>
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="cor" class="form-label">Cor: </label>
+                            <input type="text" id="cor" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="tamanho" class="form-label">Tamanho: </label>
+                            <input type="number" id="tamanho" class="form-control" required>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="tamanho" class="form-label">Tamanho: </label>
-                        <input type="number" id="tamanho" class="form-control" required>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row align-items-start">
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="preco" class="form-label">Preço: </label>
-                        <input type="number" id="preco" placeholder="R$" class="form-control" required>
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="preco" class="form-label">Preço: </label>
+                            <input type="number" id="preco" placeholder="R$" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-1">
+                            <label for="estoque" class="form-label">Estoque: </label>
+                            <input type="number" id="estoque" class="form-control" required>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="mb-1">
-                        <label for="estoque" class="form-label">Estoque: </label>
-                        <input type="number" id="estoque" class="form-control" required>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row align-items-start">
-                <div class="col m-2">
-                    <button type="reset" class="btn btn-secondary mt-1">Limpar Campos</button>
-                </div>
-                <div class="col m-2">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <div class="row align-items-start">
+                    <div class="col m-2">
+                        <button type="reset" class="btn btn-secondary mt-1">Limpar Campos</button>
+                    </div>
+                    <div class="col m-2">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </main>
 
     <div id="footer"></div>
 
     <script src="./script/navbar.js"></script>
-    <!-- <script src="./script/footer.js"></script> -->
     <script src="./script/formulario.js"></script>
+    <script src="./script/footer.js"></script>
+    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

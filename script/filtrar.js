@@ -39,10 +39,10 @@ export function aplicarFiltros() {
             <td>${tenis.estoque}</td>
             <td>
                 <button onClick="editarCadastro(${tenis.id})">
-                    <i class="fa-check-circle"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
                 </button>
                 <button onClick="deletarCadastro(${tenis.id})">
-                    <i class="fab fa-github"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </button>
             </td>
         `;
