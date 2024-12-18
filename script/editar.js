@@ -10,8 +10,6 @@ export function editarCadastro(id) {
     document.getElementById('editar-preco').value = cadastro.preco || '';
     document.getElementById('editar-estoque').value = cadastro.estoque || '';
 
-    console.log(cadastros)
-
     document.getElementById('modal-editar').setAttribute('editando', id);
 
     const modal = new bootstrap.Modal(document.getElementById('modal-editar'));
